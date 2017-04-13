@@ -21,13 +21,13 @@ if [[ “$cmd == *ssttp* ]]; then
   sm -s
 fi
 
-if [[ “$cmd == *sdil*]]; then
+if [[ “$cmd == *sdil* ]]; then
   echo '=== Activating HMRCToolsVPN...'
   nmcli con up HMRCToolsVPN
   echo '=== VPN activated.'
-  echo '=== Starting SDIL...'
-  sm --start SDIL -f
-  echo '=== SDIL setup complete.'
+  echo '=== Starting SDIL_ALL...'
+  sm --start SDIL_ALL -f
+  echo '=== SDIL_ALL setup complete.'
   sm -s
 fi
 
