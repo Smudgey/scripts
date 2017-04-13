@@ -21,6 +21,16 @@ if [[ “$cmd == *ssttp* ]]; then
   sm -s
 fi
 
+if [[ “$cmd == *sdil*]]; then
+  echo '=== Activating HMRCToolsVPN...'
+  nmcli con up HMRCToolsVPN
+  echo '=== VPN activated.'
+  echo '=== Starting SDIL...'
+  sm --start SDIL -f
+  echo '=== SDIL setup complete.'
+  sm -s
+fi
+
 if [[ “$cmd == *stop-all* ]]; then
   echo '=== Stopping all services...'
   sm --stop SELF_SERVICE_TIME_TO_PAY_ALL
